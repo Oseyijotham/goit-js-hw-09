@@ -170,8 +170,9 @@ const timer = setInterval(() => {
     digitz[3].textContent = addLeadingZero(remTime.seconds);
 
     ms = ms - 1000; 
+    console.log(ms);
 
-    if (ms === 0) {
+    if (ms < 0) {
         clearInterval(timer);
         console.log('Time is up');
     }
